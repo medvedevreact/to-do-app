@@ -29,17 +29,19 @@ export const Item = ({
   };
 
   const handleConfirmEdit = () => {
-    const updatedTask = {
-      ...task,
-      items: task.items.map((taskItem) =>
-        taskItem.id === item.id ? { ...taskItem, title: editInput } : taskItem
-      ),
-    };
-    addToHistory(updatedTask);
-    setTask(updatedTask);
-    const updatedTasks = tasks.map((t) => (t.id === id ? updatedTask : t));
-    setTasks(updatedTasks);
-    setIsEdit(false);
+    if (editInput.trim() !== "") {
+      const updatedTask = {
+        ...task,
+        items: task.items.map((taskItem) =>
+          taskItem.id === item.id ? { ...taskItem, title: editInput } : taskItem
+        ),
+      };
+      addToHistory(updatedTask);
+      setTask(updatedTask);
+      const updatedTasks = tasks.map((t) => (t.id === id ? updatedTask : t));
+      setTasks(updatedTasks);
+      setIsEdit(false);
+    }
   };
 
   const deleteItem = (itemId) => {

@@ -19,20 +19,22 @@ export const TaskPage = () => {
   const [taskHistory, setTaskHistory] = useState([task]);
 
   const addItem = () => {
-    const itemObj = {
-      title: addItemInput,
-      isDone: false,
-      id: uuidv4(),
-    };
-    const updatedTask = {
-      ...task,
-      items: [...task.items, itemObj],
-    };
-    setTask(updatedTask);
-    addToHistory(updatedTask);
-    const updatedTasks = tasks.map((t) => (t.id === id ? updatedTask : t));
-    setTasks(updatedTasks);
-    setAddItemInput("");
+    if (addItemInput.trim() !== "") {
+      const itemObj = {
+        title: addItemInput,
+        isDone: false,
+        id: uuidv4(),
+      };
+      const updatedTask = {
+        ...task,
+        items: [...task.items, itemObj],
+      };
+      setTask(updatedTask);
+      addToHistory(updatedTask);
+      const updatedTasks = tasks.map((t) => (t.id === id ? updatedTask : t));
+      setTasks(updatedTasks);
+      setAddItemInput("");
+    }
   };
 
   const addToHistory = (updatedTask) => {
