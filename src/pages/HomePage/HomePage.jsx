@@ -12,14 +12,16 @@ export const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
 
   const addNewTask = (newTask) => {
-    const newTaskObj = {
-      id: uuidv4(),
-      title: newTask,
-      items: [],
-    };
-    const newTasks = [...tasks, newTaskObj];
-    setTasks(newTasks);
-    setShowModal(false);
+    if (newTask.trim() !== "") {
+      const newTaskObj = {
+        id: uuidv4(),
+        title: newTask,
+        items: [],
+      };
+      const newTasks = [...tasks, newTaskObj];
+      setTasks(newTasks);
+      setShowModal(false);
+    }
   };
 
   const changeInput = (e) => {
