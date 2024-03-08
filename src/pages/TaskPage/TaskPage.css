@@ -1,0 +1,39 @@
+.task-page-container {
+  padding: 20px;
+}
+
+.add-item-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.add-item-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-item-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.task-buttons {
+  margin-top: 20px;
+}
+
+.task-buttons button {
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

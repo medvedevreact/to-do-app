@@ -1,0 +1,36 @@
+.task-edit-upper {
+  display: flex;
+  align-items: center;
+}
+
+.task-edit-upper input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-edit {
+  display: flex;
+  align-items: center;
+}
+
+.task-edit p {
+  margin-right: 10px;
+}
+
+.task-edit button {
+  margin-left: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-task-edit {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
